@@ -10,3 +10,12 @@ The Todo list is a responsive web application developed using Html, Bootstrap5 a
 </ul>
 
 # Screenshots
+![todo](https://github.com/Meenachie/todo/assets/140750116/4a45199f-0098-4a7d-8e14-d2d00219c3d3)
+
+# Technologies 
+<ul>
+  <li>HTML</li>
+  <li>Bootstrap5</li>
+  <li>PHP</li>
+</ul>
+
