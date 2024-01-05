@@ -115,6 +115,9 @@ function change_password(){
         else if($email != $_SESSION["email"]){
           echo "<div class='alert alert-danger'>Email is not valid</div>";
         }
+        else if($old_password != $_SESSION["password"]){
+          echo "<div class='alert alert-danger'>Old Password is wrong</div>";
+        }
         else if(!preg_match ("/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/", $old_password)){
           echo "<div class='alert alert-danger'>Password must contain at least one number, one uppercase and lowercase letter, and at least 8 characters</div>";
         }
@@ -198,7 +201,7 @@ function edit(){
             <div class="row">
             <div class="col col-lg col-sm me-2">
               <label class="form-label" for="task" >Task</label>
-              <textarea class= "form-control border-#adb5bd" id="task" name="edittask" style="width:320px;height:100px;" placeholder="'.$taskk.'"></textarea>
+              <textarea class= "form-control border-#adb5bd" id="task" name="edittask" style="width:320px;height:100px;">'.$taskk.'</textarea>
             </div>
             <div class="col col-lg col-sm">
               <label class="form-label" for="date" >Created On</label>
